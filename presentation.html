@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMate PICT — 6 Slide Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #0B132B;
+      color: #FFFFFF;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.8);
+      border-bottom: 1px solid #1E293B;
+    }
+    .brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #38BDF8;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .slide-counter {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #94A3B8;
+      background: #1E293B;
+      padding: 0.25rem 0.75rem;
+      borderRadius: 9999px;
+    }
+    .slide-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      max-width: 1080px;
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 3rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      min-height: 520px;
+      animation: fadeIn 0.3s ease-out;
+    }
+    .slide.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      background: #0284C7;
+      color: #FFFFFF;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+    h2.subtitle {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #38BDF8;
+      margin-bottom: 1.75rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .card {
+      background: #0F172A;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #F8FAFC;
+      margin-bottom: 0.4rem;
+    }
+    .card p, .card li {
+      font-size: 0.85rem;
+      color: #94A3B8;
+      line-height: 1.5;
+    }
+    .card ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .card li strong {
+      color: #E2E8F0;
+    }
+    .controls {
+      padding: 1rem 2rem;
+      background: #0F172A;
+      border-top: 1px solid #1E293B;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn {
+      background: #0284C7;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn:disabled {
+      background: #334155;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #475569;
+      color: #CBD5E1;
+    }
+    .speaker-note {
+      background: rgba(2, 132, 199, 0.1);
+      border-left: 3px solid #0284C7;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: #BAE6FD;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    th, td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #334155;
+      text-align: left;
+    }
+    th {
+      color: #38BDF8;
+      background: #0F172A;
+    }
+    td {
+      color: #CBD5E1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <span>🏠 StayMate PICT</span>
+    </div>
+    <div class="slide-counter" id="slideCounter">Slide 1 of 6</div>
+  </header>
+
+  <div class="slide-container">
+
+    <!-- SLIDE 1 -->
+    <div class="slide active" id="slide-1">
+      <div>
+        <span class="tag">Project Presentation</span>
+        <h1>StayMate PICT</h1>
+        <h2 class="subtitle">Hyperlocal Student Housing & Roommate Matching Platform for PICT Pune</h2>
+        
+        <div class="grid-2" style="margin-top: 2rem;">
+          <div class="card" style="border-left: 4px solid #38BDF8;">
+            <h3>🎯 The Vision</h3>
+            <p>To eliminate broker exploitation and create a unified, transparent platform connecting engineering students with authentic local hostels and managed co-living spaces.</p>
+          </div>
+          <div class="card" style="border-left: 4px solid #10B981;">
+            <h3>📍 Target Hub</h3>
+            <p>Dhankawadi, Katraj, Trimurti Chowk & Bharati Vidyapeeth campus belt — Pune Institute of Computer Technology (PICT).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-note">
+        <strong>🗣️ Speaker Script:</strong> "Good morning. Every year, freshers admitted to PICT struggle to find safe, affordable housing and compatible roommates. Today we present StayMate PICT, a purpose-built platform solving this exact problem."
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide" id="slide-2">
+      <div>
+        <span class="tag" style="background: #EF4444;">The Problem Statement</span>
+        <h1>The Student Housing Crisis in Pune</h1>
+        <h2 class="subtitle">Real challenges faced by outstation students and parents</h2>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>💸 Brokerage & Hidden Costs</h3>
+            <p>Local middlemen charge 1-2 months rent (₹10,000–₹25,000) as commission for basic listings, exploiting outstation families.</p>
+          </div>
+          <div class="card">
+            <h3>📍 Misleading Distance Claims</h3>
+            <p>Posters claim "2 mins from college", while in reality hostels are 2-3 km away, causing attendance issues for 8 AM practicals.</p>
+          </div>
+          <div class="card">
+            <h3>🍲 Food & Hygiene Disconnect</h3>
+            <p>Students face inconsistent mess quality, hidden water/electricity charges, and unverified Wi-Fi reliability right before exams.</p>
+          </div>
+          <div class="card">
+            <h3>🤝 Incompatible Roommate Allocation</h3>
+            <p>Random allocation leads to friction between Night Owl coders and Early Bird students, causing stress and mid-term room shifting.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-note">
+        <strong>🗣️ Speaker Script:</strong> "Students arrive in Pune and face an unorganized market with heavy brokerage, misleading distance claims, and random roommate allocation that hurts their academic routine."
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide" id="slide-3">
+      <div>
+        <span class="tag" style="background: #0284C7;">What We Are Doing</span>
+        <h1>The StayMate PICT Solution</h1>
+        <h2 class="subtitle">A transparent dual-category discovery and matching portal</h2>
+
+        <div class="grid-2">
+          <div class="card" style="border-top: 3px solid #F59E0B;">
+            <h3>1. Local Independent Boys Hostels</h3>
+            <p style="margin-bottom: 0.5rem;">Direct contact with verified local property owners around PICT:</p>
+            <ul>
+              <li>• <strong>Gurukul Boy's Hostel</strong> (Trimurti Chowk - 600m)</li>
+              <li>• <strong>Shri Swami Samartha Hostel</strong> (Ichapurti Ganpati - 750m)</li>
+              <li>• <strong>Shreeram Hostel</strong> (Ambegaon Pathar - 850m)</li>
+              <li>• <strong>Ira Hostel, Sthala & My Hostel</strong></li>
+            </ul>
+          </div>
+
+          <div class="card" style="border-top: 3px solid #38BDF8;">
+            <h3>2. Managed Co-Living Brands</h3>
+            <p style="margin-bottom: 0.5rem;">For students seeking all-inclusive 3-meal food and housekeeping:</p>
+            <ul>
+              <li>• <strong>Casa Living (कासा लिव्हींग)</strong> (Katraj)</li>
+              <li>• <strong>Union Living Student Club</strong></li>
+              <li>• <strong>Stanza Living</strong> (Shiraz, Cairo, Girona House)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-note">
+        <strong>🗣️ Speaker Script:</strong> "We bring both independent local hostels and managed co-living under one clean roof with direct owner phone numbers and 100% zero brokerage."
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide" id="slide-4">
+      <div>
+        <span class="tag" style="background: #8B5CF6;">Key Features</span>
+        <h1>Purpose-Built Features for Engineers</h1>
+        <h2 class="subtitle">Smart filters, dynamic pricing, and roommate matching</h2>
+
+        <div class="grid-4">
+          <div class="card">
+            <h3>🚶 Campus Proximity</h3>
+            <p>Mapped to PICT Main & Back Gate with exact walking minutes (4m, 7m, 10m).</p>
+          </div>
+          <div class="card">
+            <h3>🛏️ Live Room Switcher</h3>
+            <p>Instant toggle on card for Single, Double, Triple sharing with live vacancy counter.</p>
+          </div>
+          <div class="card">
+            <h3>🤝 Roommate Match</h3>
+            <p>Compatibility score based on Branch (CS/IT/EnTC), Year, Sleep routine, and Diet.</p>
+          </div>
+          <div class="card">
+            <h3>📅 Direct Booking</h3>
+            <p>Call owner directly or schedule free in-person visits with WhatsApp confirmation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-note">
+        <strong>🗣️ Speaker Script:</strong> "Our platform gives students complete transparency: dynamic room sharing pricing, genuine owner calling, and a roommate matching engine designed around college schedules."
+      </div>
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="slide" id="slide-5">
+      <div>
+        <span class="tag" style="background: #10B981;">Positive Impact</span>
+        <h1>The Positive Impact & Value Created</h1>
+        <h2 class="subtitle">Tangible benefits for students, parents, and local hostel owners</h2>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <table>
+            <thead>
+              <tr>
+                <th>Stakeholder</th>
+                <th>Tangible Positive Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong style="color:#38BDF8;">Students</strong></td>
+                <td>Saves ₹10,000–₹25,000 in zero brokerage; finds compatible branch study partners.</td>
+              </tr>
+              <tr>
+                <td><strong style="color:#38BDF8;">Parents</strong></td>
+                <td>Peace of mind through verified safety, clear deposits, and direct owner interaction.</td>
+              </tr>
+              <tr>
+                <td><strong style="color:#38BDF8;">Local Hostel Owners</strong></td>
+                <td>Direct digital visibility without paying heavy commissions to agents.</td>
+              </tr>
+              <tr>
+                <td><strong style="color:#38BDF8;">PICT Campus</strong></td>
+                <td>Better attendance and punctuality for 8:00 AM practicals.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="speaker-note">
+        <strong>🗣️ Speaker Script:</strong> "The impact is real: direct cost savings for students, digital empowerment for local hostel owners, and peace of mind for outstation parents."
+      </div>
+    </div>
+
+    <!-- SLIDE 6 -->
+    <div class="slide" id="slide-6">
+      <div>
+        <span class="tag" style="background: #F59E0B;">The Future</span>
+        <h1>Scalability & Future Roadmap</h1>
+        <h2 class="subtitle">Expanding from PICT to major Pune educational clusters</h2>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>🚀 Pune Campus Expansion</h3>
+            <p>Scale the verified model to COEP (Shivajinagar), VIT (Bibwewadi), MIT-WPU (Kothrud), and PCCOE (Akurdi).</p>
+          </div>
+          <div class="card">
+            <h3>🍱 Mess & Student Utilities</h3>
+            <p>Unified digital mess subscriptions, tiffin tracking, and senior-to-junior textbook/drafter exchange.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-note">
+        <strong>🗣️ Speaker Script:</strong> "We built this architecture to easily expand across all Pune engineering colleges. Thank you, and we look forward to your questions!"
+      </div>
+    </div>
+
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-outline" id="prevBtn" onclick="changeSlide(-1)" disabled>← Previous</button>
+    <div style="display: flex; gap: 0.5rem;" id="indicatorDots"></div>
+    <button class="btn" id="nextBtn" onclick="changeSlide(1)">Next Slide →</button>
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 6;
+
+    function updateSlide() {
+      document.querySelectorAll('.slide').forEach((s, idx) => {
+        s.classList.toggle('active', idx + 1 === currentSlide);
+      });
+
+      document.getElementById('slideCounter').textContent = `Slide ${currentSlide} of ${totalSlides}`;
+      document.getElementById('prevBtn').disabled = currentSlide === 1;
+      
+      const nextBtn = document.getElementById('nextBtn');
+      if (currentSlide === totalSlides) {
+        nextBtn.textContent = 'Finish Presentation ✓';
+      } else {
+        nextBtn.textContent = 'Next Slide →';
+      }
+    }
+
+    function changeSlide(direction) {
+      if (currentSlide + direction >= 1 && currentSlide + direction <= totalSlides) {
+        currentSlide += direction;
+        updateSlide();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'Space') changeSlide(1);
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+
+    updateSlide();
+  </script>
+</body>
+</html>
