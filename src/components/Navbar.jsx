@@ -313,77 +313,68 @@ export default function Navbar({ onOpenScheduleModal: _onOpenScheduleModal, onOp
           </button>
         </nav>
 
-        {/* Right Section: User Avatar & Profile Dropdown */}
+        {/* Right Section: User Avatar & Profile Dropdown / Sign In Button */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           
-          <div style={{ position: 'relative' }} ref={dropdownRef}>
-            <button
-              onClick={() => {
-                if (user?.isLoggedIn) {
-                  setDropdownOpen(!dropdownOpen);
-                } else {
-                  setIsAuthModalOpen(true);
-                }
-              }}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.55rem',
-                background: dropdownOpen ? '#EFF6FF' : '#F8FAFC',
-                border: `1.5px solid ${dropdownOpen ? '#1688E8' : '#E2E8F0'}`,
-                borderRadius: '10px',
-                padding: '0.35rem 0.65rem 0.35rem 0.4rem',
-                cursor: 'pointer',
-                transition: 'all 0.2s',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
-              }}
-              onMouseEnter={e => {
-                if (!dropdownOpen) e.currentTarget.style.borderColor = '#CBD5E1';
-              }}
-              onMouseLeave={e => {
-                if (!dropdownOpen) e.currentTarget.style.borderColor = '#E2E8F0';
-              }}
-            >
-              {/* User Avatar */}
-              <div style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '8px',
-                background: '#14243A',
-                color: '#ffffff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontWeight: 800,
-                fontSize: '0.75rem',
-                overflow: 'hidden'
-              }}>
-                {user?.isLoggedIn ? (
-                  user?.avatar ? (
+          {user?.isLoggedIn ? (
+            <div style={{ position: 'relative' }} ref={dropdownRef}>
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.55rem',
+                  background: dropdownOpen ? '#EFF6FF' : '#F8FAFC',
+                  border: `1.5px solid ${dropdownOpen ? '#1688E8' : '#E2E8F0'}`,
+                  borderRadius: '10px',
+                  padding: '0.35rem 0.65rem 0.35rem 0.4rem',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s',
+                  boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
+                }}
+                onMouseEnter={e => {
+                  if (!dropdownOpen) e.currentTarget.style.borderColor = '#CBD5E1';
+                }}
+                onMouseLeave={e => {
+                  if (!dropdownOpen) e.currentTarget.style.borderColor = '#E2E8F0';
+                }}
+              >
+                {/* User Avatar */}
+                <div style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  background: '#14243A',
+                  color: '#ffffff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 800,
+                  fontSize: '0.75rem',
+                  overflow: 'hidden'
+                }}>
+                  {user?.avatar ? (
                     <img src={user.avatar} alt={user.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   ) : (
-                    user.name.slice(0, 2).toUpperCase()
-                  )
-                ) : (
-                  <User size={15} color="#94A3B8" />
-                )}
-              </div>
-
-              {/* Name & Role */}
-              <div style={{ textAlign: 'left', lineHeight: 1.2 }}>
-                <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#14243A' }}>
-                  {user?.isLoggedIn ? user.name.split(' ')[0] : 'Sign In'}
+                    user?.name?.slice(0, 2).toUpperCase() || 'ST'
+                  )}
                 </div>
-                <div style={{ fontSize: '0.65rem', color: '#64748B', fontWeight: 600 }}>
-                  {user?.isLoggedIn ? (user.branch?.includes('Computer') ? 'PICT CS' : 'PICT Student') : 'Guest'}
-                </div>
-              </div>
 
-              <ChevronDown size={14} color="#64748B" style={{
-                transform: dropdownOpen ? 'rotate(180deg)' : 'none',
-                transition: 'transform 0.2s'
-              }} />
-            </button>
+                {/* Name & Role */}
+                <div style={{ textAlign: 'left', lineHeight: 1.2 }}>
+                  <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#14243A' }}>
+                    {user?.name?.split(' ')[0] || 'Student'}
+                  </div>
+                  <div style={{ fontSize: '0.65rem', color: '#64748B', fontWeight: 600 }}>
+                    {user?.branch?.includes('Computer') ? 'PICT CS' : 'PICT Student'}
+                  </div>
+                </div>
+
+                <ChevronDown size={14} color="#64748B" style={{
+                  transform: dropdownOpen ? 'rotate(180deg)' : 'none',
+                  transition: 'transform 0.2s'
+                }} />
+              </button>
 
             {/* Profile Dropdown Menu */}
             {dropdownOpen && (
@@ -560,6 +551,38 @@ export default function Navbar({ onOpenScheduleModal: _onOpenScheduleModal, onOp
               </div>
             )}
           </div>
+        ) : (
+          <button
+            onClick={() => setIsAuthModalOpen(true)}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              background: 'linear-gradient(135deg, #14243A 0%, #1688E8 100%)',
+              color: '#ffffff',
+              border: 'none',
+              borderRadius: '10px',
+              padding: '0.5rem 1.1rem',
+              fontSize: '0.85rem',
+              fontWeight: 700,
+              fontFamily: "'Manrope', sans-serif",
+              cursor: 'pointer',
+              boxShadow: '0 2px 8px rgba(22, 136, 232, 0.25)',
+              transition: 'all 0.2s ease'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-1px)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(22, 136, 232, 0.35)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 2px 8px rgba(22, 136, 232, 0.25)';
+            }}
+          >
+            <User size={15} />
+            <span>Sign In / Register</span>
+          </button>
+        )}
 
           {/* Mobile hamburger toggle */}
           <button
@@ -595,6 +618,30 @@ export default function Navbar({ onOpenScheduleModal: _onOpenScheduleModal, onOp
           zIndex: 99
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            {!user?.isLoggedIn && (
+              <button
+                onClick={() => {
+                  setMobileOpen(false);
+                  setIsAuthModalOpen(true);
+                }}
+                style={{
+                  padding: '0.85rem 1rem',
+                  borderRadius: '10px',
+                  background: 'linear-gradient(135deg, #14243A 0%, #1688E8 100%)',
+                  color: '#ffffff',
+                  fontWeight: 800,
+                  border: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem',
+                  cursor: 'pointer',
+                  marginBottom: '0.5rem'
+                }}
+              >
+                <User size={16} /> Sign In / Register
+              </button>
+            )}
             <Link
               to="/search-pg"
               onClick={() => setMobileOpen(false)}

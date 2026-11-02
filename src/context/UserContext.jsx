@@ -10,16 +10,16 @@ export function UserProvider({ children }) {
       const saved = localStorage.getItem('staymate_user');
       if (saved) return JSON.parse(saved);
     } catch (e) {}
-    // Default active student profile
+    // Default guest state for first-time visitor (requires Sign In / Sign Up)
     return {
-      name: 'Pratham Shinde',
-      email: 'pratham.shinde@pict.edu',
-      phone: '+91 98231 45678',
+      name: 'Guest Student',
+      email: '',
+      phone: '',
       college: 'PICT Pune',
-      branch: 'Computer Engineering',
-      year: '3rd Year (TE)',
-      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop',
-      isLoggedIn: true
+      branch: '',
+      year: '',
+      avatar: '',
+      isLoggedIn: false
     };
   });
 
@@ -162,14 +162,34 @@ export function UserProvider({ children }) {
   // Sign in with Google
   const loginWithGoogle = (customProfile = null) => {
     const profile = customProfile || {
-      name: 'Prashant Patil',
-      email: 'prashant.patil@pict.edu',
-      phone: '+91 98901 23456',
+      name: 'Shreejit Pawar',
+      email: 'shreejitpawar07@gmail.com',
+      phone: '+91 98231 45678',
       college: 'PICT Pune',
       branch: 'Computer Engineering',
-      year: '2nd Year (SE)',
+      year: '3rd Year (TE)',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop',
+      isLoggedIn: true,
+      provider: 'google'
+    };
+    setUser(profile);
+    setIsAuthModalOpen(false);
+  };
+
+  // Sign in or Create account with Email/Password or Username
+  const loginWithCredentials = ({ name, email, phone, branch, year }) => {
+    const cleanName = name?.trim() || (email ? email.split('@')[0] : 'PICT Student');
+    const cleanEmail = email?.trim() || (phone ? `${phone.replace(/\D/g, '').slice(-10)}@student.pict.edu` : 'student@pict.edu');
+    const profile = {
+      name: cleanName,
+      email: cleanEmail,
+      phone: phone?.trim() || '+91 98231 45678',
+      college: 'PICT Pune',
+      branch: branch || 'Computer Engineering',
+      year: year || '2nd Year (SE)',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
-      isLoggedIn: true
+      isLoggedIn: true,
+      provider: 'credentials'
     };
     setUser(profile);
     setIsAuthModalOpen(false);
@@ -185,7 +205,8 @@ export function UserProvider({ children }) {
       branch: branch || 'Computer Engineering',
       year: year || '2nd Year (SE)',
       avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop',
-      isLoggedIn: true
+      isLoggedIn: true,
+      provider: 'phone'
     });
     setIsAuthModalOpen(false);
   };
@@ -197,7 +218,7 @@ export function UserProvider({ children }) {
   // Logout
   const logout = () => {
     setUser({
-      name: 'Guest User',
+      name: 'Guest Student',
       email: '',
       phone: '',
       college: 'PICT Pune',
@@ -206,6 +227,9 @@ export function UserProvider({ children }) {
       avatar: '',
       isLoggedIn: false
     });
+    try {
+      localStorage.removeItem('staymate_user');
+    } catch (e) {}
   };
 
   return (
@@ -230,6 +254,7 @@ export function UserProvider({ children }) {
       setProfileActiveTab,
       openProfileWithTab,
       loginWithGoogle,
+      loginWithCredentials,
       loginWithPhone,
       updateUserProfile,
       logout
@@ -243,7 +268,7 @@ export function useUser() {
   const context = useContext(UserContext);
   if (!context) {
     return {
-      user: { name: 'Guest User', isLoggedIn: false },
+      user: { name: 'Guest Student', isLoggedIn: false },
       savedProperties: [],
       bookedVisits: [],
       savedRoommates: [],
@@ -262,6 +287,7 @@ export function useUser() {
       addBooking: () => {},
       cancelBooking: () => {},
       loginWithGoogle: () => {},
+      loginWithCredentials: () => {},
       loginWithPhone: () => {},
       updateUserProfile: () => {},
       logout: () => {}

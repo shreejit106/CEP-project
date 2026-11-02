@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
   Search, MapPin, Star, Heart, ArrowRight,
@@ -13,26 +13,26 @@ import { useUser } from '../context/UserContext';
 /* ── SVG Icons ─── */
 const SparkleIcon = () => (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+    <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
   </svg>
 );
 
 const WhatsAppIcon = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.552 4.115 1.52 5.847L.057 23.43l5.73-1.502A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.876 0-3.63-.49-5.147-1.346l-.369-.218-3.4.892.907-3.316-.237-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.552 4.115 1.52 5.847L.057 23.43l5.73-1.502A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.876 0-3.63-.49-5.147-1.346l-.369-.218-3.4.892.907-3.316-.237-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
   </svg>
 );
 
 const CheckIcon = ({ size = 11, color = '#0284c7' }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="20 6 9 17 4 12"/>
+    <polyline points="20 6 9 17 4 12" />
   </svg>
 );
 
 const StarIcon = ({ filled, size = 12 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill={filled ? '#f59e0b' : 'none'} stroke="#f59e0b" strokeWidth="2">
-    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
   </svg>
 );
 
@@ -95,7 +95,7 @@ function PropertyCard({ property, onSelect, onOpenScheduleModal }) {
             transform: imgHover ? 'scale(1.06)' : 'scale(1)'
           }}
         />
-        
+
         {/* Soft gradient overlay */}
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15, 23, 42, 0.55) 0%, transparent 50%)' }} />
 
@@ -179,7 +179,7 @@ function PropertyCard({ property, onSelect, onOpenScheduleModal }) {
 
       {/* Card Content Body */}
       <div style={{ padding: '1.25rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-        
+
         {/* Type & Star Rating */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.35rem' }}>
           <span style={{
@@ -359,11 +359,24 @@ function PropertyCard({ property, onSelect, onOpenScheduleModal }) {
 /* ── Main Home Component ─── */
 const Home = ({ onOpenScheduleModal, onSelectProperty }) => {
   const navigate = useNavigate();
+  const { user, setIsAuthModalOpen } = useUser();
   const [activeCategory, setActiveCategory] = useState('all');
   const [budget, setBudget] = useState(8500);
   const [matchScore, setMatchScore] = useState(88);
   const propertiesSectionRef = useRef(null);
   useScrollReveal();
+
+  // Automatic first-visit sign-in / sign-up modal popup
+  useEffect(() => {
+    const hasPrompted = sessionStorage.getItem('pgscout_auth_prompted');
+    if (!user?.isLoggedIn && !hasPrompted) {
+      const timer = setTimeout(() => {
+        setIsAuthModalOpen(true);
+        sessionStorage.setItem('pgscout_auth_prompted', 'true');
+      }, 700);
+      return () => clearTimeout(timer);
+    }
+  }, [user?.isLoggedIn, setIsAuthModalOpen]);
 
   const handleBudgetChange = (val) => {
     setBudget(val);
@@ -404,7 +417,7 @@ const Home = ({ onOpenScheduleModal, onSelectProperty }) => {
         <div style={{ position: 'absolute', bottom: '-50px', left: '-50px', width: '380px', height: '380px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 65%)', pointerEvents: 'none' }} />
 
         <div className="container" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          
+
           {/* Eyebrow Label */}
           <div style={{
             display: 'inline-flex',
@@ -614,7 +627,7 @@ const Home = ({ onOpenScheduleModal, onSelectProperty }) => {
       {/* ═══════════ PROPERTIES SECTION ═══════════ */}
       <section ref={propertiesSectionRef} style={{ padding: '70px 0 80px' }}>
         <div className="container">
-          
+
           {/* Header */}
           <div style={{
             display: 'flex',
@@ -789,7 +802,7 @@ const Home = ({ onOpenScheduleModal, onSelectProperty }) => {
 
             {/* Right Visualization: Compatibility Orbit */}
             <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              
+
               {/* Compatibility Orbit Circle */}
               <div style={{
                 position: 'relative',
@@ -909,7 +922,7 @@ const Home = ({ onOpenScheduleModal, onSelectProperty }) => {
       {/* ═══════════ HOW WEBSITE WORKS (Target of HOW WEBSITE WORKS tab) ═══════════ */}
       <section id="how-it-works" style={{ padding: '0 0 100px' }}>
         <div className="container">
-          
+
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <div style={{
               fontSize: '0.72rem',
