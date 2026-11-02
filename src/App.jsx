@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 import Navbar from './components/Navbar';
@@ -15,6 +15,90 @@ import UserProfileModal from './components/UserProfileModal';
 import AdminMediaModal from './components/AdminMediaModal';
 import { pgs } from './data/mockData';
 import { Layers, X, ArrowRight } from 'lucide-react';
+
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('App ErrorBoundary caught:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '2rem',
+          background: '#f8fafc',
+          color: '#0f172a',
+          fontFamily: "'Inter', sans-serif",
+          textAlign: 'center'
+        }}>
+          <div style={{
+            background: '#ffffff',
+            padding: '2.5rem',
+            borderRadius: '18px',
+            boxShadow: '0 12px 36px rgba(0,0,0,0.08)',
+            maxWidth: '520px',
+            border: '1px solid #e2e8f0'
+          }}>
+            <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>⚠️</div>
+            <h2 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '0.6rem' }}>
+              Something went wrong loading PGScout
+            </h2>
+            <p style={{ fontSize: '0.9rem', color: '#64748b', marginBottom: '1.5rem', lineHeight: 1.6 }}>
+              {this.state.error?.message || 'An unexpected rendering error occurred. Please refresh or return to the home page.'}
+            </p>
+            <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center' }}>
+              <button
+                onClick={() => window.location.reload()}
+                style={{
+                  padding: '0.65rem 1.4rem',
+                  borderRadius: '10px',
+                  background: '#0284c7',
+                  color: '#ffffff',
+                  border: 'none',
+                  fontWeight: 700,
+                  fontSize: '0.85rem',
+                  cursor: 'pointer'
+                }}
+              >
+                Reload Page
+              </button>
+              <button
+                onClick={() => {
+                  this.setState({ hasError: false });
+                  window.location.href = '/';
+                }}
+                style={{
+                  padding: '0.65rem 1.4rem',
+                  borderRadius: '10px',
+                  background: '#f1f5f9',
+                  color: '#334155',
+                  border: '1px solid #cbd5e1',
+                  fontWeight: 700,
+                  fontSize: '0.85rem',
+                  cursor: 'pointer'
+                }}
+              >
+                Go to Home
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 function AppContent() {
   // Modal states
@@ -187,7 +271,9 @@ function App() {
   return (
     <Router>
       <UserProvider>
-        <AppContent />
+        <ErrorBoundary>
+          <AppContent />
+        </ErrorBoundary>
       </UserProvider>
     </Router>
   );

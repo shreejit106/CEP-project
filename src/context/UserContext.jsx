@@ -242,7 +242,30 @@ export function UserProvider({ children }) {
 export function useUser() {
   const context = useContext(UserContext);
   if (!context) {
-    throw new Error('useUser must be used within a UserProvider');
+    return {
+      user: { name: 'Guest User', isLoggedIn: false },
+      savedProperties: [],
+      bookedVisits: [],
+      savedRoommates: [],
+      isAuthModalOpen: false,
+      setIsAuthModalOpen: () => {},
+      isProfileModalOpen: false,
+      setIsProfileModalOpen: () => {},
+      profileActiveTab: 'saved',
+      setProfileActiveTab: () => {},
+      openProfileWithTab: () => {},
+      toggleSaveProperty: () => {},
+      isPropertySaved: () => false,
+      removeSavedProperty: () => {},
+      toggleSaveRoommate: () => {},
+      isRoommateSaved: () => false,
+      addBooking: () => {},
+      cancelBooking: () => {},
+      loginWithGoogle: () => {},
+      loginWithPhone: () => {},
+      updateUserProfile: () => {},
+      logout: () => {}
+    };
   }
   return context;
 }
