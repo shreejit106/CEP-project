@@ -1,0 +1,1817 @@
+/* ── PG SCOUT: FIND STAY DIRECTORY STYLESHEET ── */
+
+.pg-search-page-wrapper {
+  background-color: #F4F7FC;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 5rem;
+  padding-top: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* 2. Centered Page Container */
+.pg-search-container {
+  max-width: 1440px;
+  width: calc(100% - 64px);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* 3. Page Header */
+.pg-header-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #E3EAF3;
+}
+
+.pg-header-top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pg-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0284C7;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.pg-breadcrumb-sep {
+  color: #94A3B8;
+  font-weight: 400;
+}
+
+.pg-breadcrumb-badge {
+  background: #E0F2FE;
+  color: #0369A1;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+}
+
+.pg-main-heading {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.pg-main-subtitle {
+  font-size: 0.92rem;
+  color: #475569;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+  max-width: 680px;
+  line-height: 1.5;
+}
+
+/* Small Horizontal Trust Section */
+.pg-trust-strip {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #FFFFFF;
+  border: 1px solid #E3EAF3;
+  border-radius: 12px;
+  padding: 0.65rem 1.15rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  flex-wrap: wrap;
+}
+
+.pg-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.pg-trust-item-icon-green {
+  color: #059669;
+}
+
+.pg-trust-item-icon-blue {
+  color: #0284C7;
+}
+
+.pg-trust-divider {
+  width: 1px;
+  height: 16px;
+  background-color: #E2E8F0;
+}
+
+/* 4. Search Bar & Preset Chips */
+.pg-search-bar-card {
+  background: #FFFFFF;
+  border: 1px solid #E3EAF3;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+  margin-bottom: 1.75rem;
+}
+
+.pg-search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.pg-search-icon {
+  position: absolute;
+  left: 1rem;
+  color: #94A3B8;
+  pointer-events: none;
+}
+
+.pg-search-input {
+  width: 100%;
+  padding: 0.8rem 2.8rem 0.8rem 2.85rem;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  background: #F8FAFC;
+  color: #0F172A;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.pg-search-input:focus {
+  background: #FFFFFF;
+  border-color: #0284C7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.pg-search-clear-btn {
+  position: absolute;
+  right: 0.85rem;
+  background: none;
+  border: none;
+  color: #94A3B8;
+  cursor: pointer;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pg-search-clear-btn:hover {
+  color: #475569;
+}
+
+/* Preset Chips */
+.pg-preset-chips-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid #F1F5F9;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.pg-preset-chips-row::-webkit-scrollbar {
+  display: none;
+}
+
+.pg-preset-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.pg-preset-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
+  color: #334155;
+  transition: all 0.18s ease;
+}
+
+.pg-preset-chip:hover {
+  border-color: #0284C7;
+  color: #0284C7;
+  background: #EFF6FF;
+}
+
+.pg-preset-chip.active {
+  background: #0284C7;
+  color: #FFFFFF;
+  border-color: #0284C7;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
+}
+
+/* 5. Main Discovery Grid */
+.pg-discovery-grid {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* Left Filter Sidebar */
+.pg-sidebar {
+  width: 300px;
+  background: #FFFFFF;
+  border: 1px solid #E3EAF3;
+  border-radius: 16px;
+  padding: 22px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  position: sticky;
+  top: 84px;
+}
+
+.pg-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #EDF2F7;
+  margin-bottom: 16px;
+}
+
+.pg-sidebar-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pg-sidebar-heading {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.pg-sidebar-count-badge {
+  background: #E0F2FE;
+  color: #0369A1;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.1rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.pg-sidebar-reset-btn {
+  background: none;
+  border: none;
+  color: #0284C7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+}
+
+.pg-sidebar-reset-btn:hover {
+  text-decoration: underline;
+  color: #0369A1;
+}
+
+/* Filter Groups inside Sidebar */
+.pg-filter-group {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #EDF2F7;
+}
+
+.pg-filter-group:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.pg-filter-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.pg-filter-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.pg-filter-val-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #0284C7;
+  background: #E0F2FE;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+}
+
+/* Segmented Control (Gender, Sharing, Type) */
+.pg-segmented-control {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.pg-segmented-control-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pg-segmented-btn {
+  background: transparent;
+  border: none;
+  padding: 6px 4px;
+  border-radius: 7px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748B;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+
+.pg-segmented-btn:hover {
+  color: #0F172A;
+}
+
+.pg-segmented-btn.active {
+  background: #FFFFFF;
+  color: #0284C7;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+/* Styled Select Input */
+.pg-select-field {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1E293B;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.pg-select-field:focus {
+  border-color: #0284C7;
+}
+
+/* Styled Sliders */
+.pg-slider-wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pg-range-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: #BAE6FD;
+  outline: none;
+  cursor: pointer;
+  accent-color: #0284C7;
+  margin: 6px 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+.pg-slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+/* Checkbox Checklist */
+.pg-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pg-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  user-select: none;
+}
+
+.pg-custom-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #0284C7;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* AI Dealbreaker Chips */
+.pg-dealbreakers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pg-dealbreaker-btn {
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
+  color: #475569;
+  transition: all 0.15s ease;
+}
+
+.pg-dealbreaker-btn:hover {
+  border-color: #BAE6FD;
+  background: #F0F9FF;
+}
+
+.pg-dealbreaker-btn.active {
+  background: #0284C7;
+  color: #FFFFFF;
+  border-color: #0284C7;
+  box-shadow: 0 1px 4px rgba(2, 132, 199, 0.2);
+}
+
+/* Scout Inspected Card Switch */
+.pg-inspected-switch-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.pg-inspected-switch-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pg-inspected-switch-title {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #065F46;
+}
+
+.pg-inspected-switch-sub {
+  display: block;
+  font-size: 0.68rem;
+  color: #047857;
+}
+
+/* ── RIGHT RESULTS SECTION ── */
+.pg-results-section {
+  min-width: 0;
+  width: 100%;
+}
+
+.pg-results-header-bar {
+  background: #FFFFFF;
+  border: 1px solid #E3EAF3;
+  border-radius: 14px;
+  padding: 12px 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.02);
+}
+
+.pg-results-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pg-results-count-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.pg-results-count-sub {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #64748B;
+  margin-left: 6px;
+}
+
+.pg-sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pg-sort-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pg-sort-select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #E2E8F0;
+  background: #F8FAFC;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1E293B;
+  cursor: pointer;
+  outline: none;
+}
+
+.pg-sort-select:focus {
+  border-color: #0284C7;
+}
+
+/* Active Filter Chips Row */
+.pg-active-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #F1F5F9;
+}
+
+.pg-active-chips-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #94A3B8;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+.pg-active-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #E0F2FE;
+  color: #0369A1;
+  border: 1px solid #BAE6FD;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.pg-active-chip-remove {
+  background: none;
+  border: none;
+  color: #0369A1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.pg-active-chip-remove:hover {
+  color: #075985;
+}
+
+.pg-clear-all-link {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #0284C7;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+/* ── 6. HOSTEL CARD DESIGN (TWO-COLUMN GRID) ── */
+.pg-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hostel-card {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 20px;
+  background: #FFFFFF;
+  border: 1px solid #E3EAF3;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.hostel-card:hover {
+  transform: translateY(-2px);
+  border-color: #BAE6FD;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.10);
+}
+
+.hostel-card.top-match-card {
+  border-color: #38BDF8;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.12);
+}
+
+/* Card Image Section */
+.hostel-card-media {
+  width: 260px;
+  height: 220px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  background: #0F172A;
+  flex-shrink: 0;
+}
+
+.hostel-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hostel-card:hover .hostel-card-img {
+  transform: scale(1.04);
+}
+
+.hostel-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, transparent 40%, rgba(15, 23, 42, 0.8) 100%);
+  pointer-events: none;
+}
+
+/* Image Badges */
+.hostel-card-badges-top {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.hostel-pill-gender {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hostel-pill-managed {
+  background: #0284C7;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.hostel-pill-verified {
+  background: #059669;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* Favorite Heart Button */
+.hostel-card-favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  color: #475569;
+  transition: all 0.18s ease;
+}
+
+.hostel-card-favorite-btn:hover {
+  transform: scale(1.1);
+  color: #EF4444;
+}
+
+.hostel-card-favorite-btn.saved {
+  background: #0284C7;
+  color: #FFFFFF;
+  border-color: #0284C7;
+}
+
+/* Image Carousel Arrows & Dots */
+.hostel-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.6);
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: background 0.15s ease;
+}
+
+.hostel-carousel-arrow:hover {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.hostel-carousel-prev {
+  left: 8px;
+}
+
+.hostel-carousel-next {
+  right: 8px;
+}
+
+.hostel-carousel-dots {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hostel-carousel-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.hostel-carousel-dot.active {
+  width: 12px;
+  border-radius: 9999px;
+  background: #FFFFFF;
+}
+
+/* Walking Distance Overlay */
+.hostel-card-walk-pill {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 2;
+}
+
+/* Card Photo Count & Source Indicator */
+.hostel-card-photo-count-pill {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 6px;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hostel-card-streetview-pill {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(4px);
+  color: #38BDF8;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 3px 7px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 2;
+  cursor: pointer;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  transition: all 0.15s ease;
+}
+
+.hostel-card-streetview-pill:hover {
+  background: #0F172A;
+  color: #FFFFFF;
+  border-color: #38BDF8;
+  transform: translateY(-1px);
+}
+
+.pg-admin-media-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #0F172A;
+  color: #FFFFFF;
+  border: 1px solid #334155;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pg-admin-media-btn:hover {
+  background: #1E293B;
+  border-color: #0284C7;
+  color: #38BDF8;
+}
+
+/* Card Information Column */
+.hostel-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+/* Top Section of Card Info */
+.hostel-card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.hostel-card-title-area {
+  min-width: 0;
+}
+
+.hostel-card-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hostel-card-name {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.hostel-card-name:hover {
+  color: #0284C7;
+}
+
+.hostel-ai-match-badge {
+  background: #E0F2FE;
+  color: #0369A1;
+  border: 1px solid #BAE6FD;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hostel-ratings-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  flex-wrap: wrap;
+}
+
+.hostel-google-rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFBEB;
+  border: 1.5px solid #FDE68A;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.76rem;
+  color: #92400E;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-family: inherit;
+}
+
+.hostel-google-rating-pill:hover {
+  background: #FEF3C7;
+  border-color: #F59E0B;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+}
+
+.google-rating-score {
+  font-weight: 800;
+  color: #B45309;
+}
+
+.google-rating-label {
+  font-weight: 700;
+  color: #78350F;
+}
+
+.google-review-count {
+  font-weight: 600;
+  color: #92400E;
+  font-size: 0.72rem;
+}
+
+.google-view-reviews-link {
+  font-weight: 700;
+  color: #0284C7;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+.hostel-bayesian-rating {
+  font-weight: 800;
+  color: #D97706;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.hostel-reviews-count {
+  font-weight: 600;
+  color: #64748B;
+  font-size: 0.72rem;
+}
+
+.hostel-google-link {
+  color: #64748B;
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.hostel-google-link:hover {
+  color: #0284C7;
+}
+
+.hostel-card-address {
+  font-size: 0.76rem;
+  color: #64748B;
+  margin-top: 3px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Pricing Display (Right of Card Header) */
+.hostel-card-pricing-block {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.hostel-pricing-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #94A3B8;
+  text-transform: uppercase;
+}
+
+.hostel-monthly-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.1;
+}
+
+.hostel-price-sub {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748B;
+}
+
+.hostel-deposit-note {
+  display: block;
+  font-size: 0.68rem;
+  color: #94A3B8;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Middle Section: Room Options Pills */
+.hostel-room-pricing-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0;
+  padding: 6px 0;
+  border-top: 1px solid #F1F5F9;
+  border-bottom: 1px solid #F1F5F9;
+  flex-wrap: wrap;
+}
+
+.hostel-room-pill-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #64748B;
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+
+.hostel-room-pill {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
+  color: #475569;
+  transition: all 0.15s ease;
+}
+
+.hostel-room-pill:hover {
+  border-color: #BAE6FD;
+  background: #F8FAFC;
+}
+
+.hostel-room-pill.active {
+  background: #EFF6FF;
+  color: #0284C7;
+  border-color: #0284C7;
+  font-weight: 800;
+}
+
+.hostel-room-pill.over-budget {
+  opacity: 0.6;
+  background: #F8FAFC;
+  border-style: dashed;
+  color: #94A3B8;
+}
+
+.hostel-room-pill.active.over-budget {
+  opacity: 0.9;
+  border-style: solid;
+  border-color: #F59E0B;
+  background: #FFFBEB;
+  color: #B45309;
+}
+
+/* Benefits & Intelligence Indicators */
+.hostel-benefits-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 6px 0;
+}
+
+.hostel-benefit-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 6px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #334155;
+}
+
+.hostel-benefit-tag-icon {
+  color: #0284C7;
+}
+
+/* AI Recommendation Reasons & Trade-offs */
+.hostel-ai-explanation-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 4px 0 8px 0;
+}
+
+.hostel-reason-chip {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #065F46;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.hostel-tradeoff-chip {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #92400E;
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+/* Bottom Action Bar */
+.hostel-card-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #F1F5F9;
+  margin-top: 6px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hostel-card-status-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hostel-vacancy-status {
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hostel-vacancy-open {
+  color: #059669;
+}
+
+.hostel-vacancy-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #059669;
+  display: inline-block;
+}
+
+.hostel-compare-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hostel-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hostel-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 12px;
+  border-radius: 9px;
+  border: 1.5px solid #E2E8F0;
+  background: #FFFFFF;
+  color: #1E293B;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.hostel-contact-btn:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.hostel-schedule-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 12px;
+  border-radius: 9px;
+  border: 1.5px solid #BAE6FD;
+  background: #F0F9FF;
+  color: #0369A1;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.hostel-schedule-btn:hover {
+  background: #E0F2FE;
+  border-color: #0284C7;
+}
+
+.hostel-details-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border-radius: 9px;
+  border: 1px solid #0284C7;
+  background: #0284C7;
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+  transition: all 0.15s ease;
+}
+
+.hostel-details-btn:hover {
+  background: #0369A1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.35);
+}
+
+/* Empty State */
+.pg-empty-state {
+  background: #FFFFFF;
+  border: 1.5px dashed #CBD5E1;
+  border-radius: 16px;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.pg-empty-state-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #F0F9FF;
+  color: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.pg-empty-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 0.5rem 0;
+}
+
+.pg-empty-sub {
+  font-size: 0.85rem;
+  color: #64748B;
+  max-width: 440px;
+  margin: 0 auto 1.25rem auto;
+  line-height: 1.5;
+}
+
+.pg-empty-reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: #0284C7;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pg-empty-reset-btn:hover {
+  background: #0369A1;
+}
+
+.pg-empty-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.pg-empty-suggestion-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #F0F9FF;
+  color: #0284C7;
+  border: 1.5px solid #BAE6FD;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pg-empty-suggestion-btn:hover {
+  background: #E0F2FE;
+  border-color: #0284C7;
+}
+
+/* Mobile Filter Trigger Button */
+.pg-mobile-filter-trigger {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  background: #0284C7;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Mobile Filter Drawer / Modal */
+.pg-mobile-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.pg-mobile-drawer-panel {
+  background: #FFFFFF;
+  border-radius: 20px 20px 0 0;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.2);
+}
+
+.pg-mobile-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #EDF2F7;
+  margin-bottom: 16px;
+}
+
+.pg-mobile-drawer-close {
+  background: #F1F5F9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #475569;
+}
+
+/* ── 8. RESPONSIVE MEDIA QUERIES ── */
+
+@media (max-width: 1024px) {
+  .pg-search-container {
+    width: calc(100% - 40px);
+  }
+  .pg-discovery-grid {
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 20px;
+  }
+  .pg-sidebar {
+    width: 280px;
+  }
+  .hostel-card {
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 16px;
+  }
+  .hostel-card-media {
+    width: 230px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pg-discovery-grid {
+    grid-template-columns: 1fr;
+  }
+  .pg-sidebar {
+    display: none;
+  }
+  .pg-mobile-filter-trigger {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .pg-search-container {
+    width: calc(100% - 24px);
+  }
+  .pg-main-heading {
+    font-size: 1.75rem;
+  }
+  .hostel-card {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 14px;
+  }
+  .hostel-card-media {
+    width: 100%;
+    height: 200px;
+  }
+  .hostel-card-header-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hostel-card-pricing-block {
+    text-align: left;
+  }
+  .hostel-card-bottom-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .hostel-card-status-area {
+    justify-content: space-between;
+  }
+  .hostel-actions-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hostel-details-btn {
+    grid-column: span 2;
+    justify-content: center;
+  }
+}
+
+/* ── TOP 5 GOOGLE REVIEWS MODAL ── */
+.hostel-reviews-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  border-radius: 9px;
+  border: 1.5px solid #FDE68A;
+  background: #FFFBEB;
+  color: #92400E;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.hostel-reviews-btn:hover {
+  background: #FEF3C7;
+  border-color: #F59E0B;
+}
+
+.google-reviews-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.google-reviews-modal-container {
+  background: #FFFFFF;
+  border-radius: 20px;
+  max-width: 620px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+  border: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.google-reviews-modal-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #F1F5F9;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  background: #FFFFFF;
+  z-index: 10;
+  border-radius: 20px 20px 0 0;
+}
+
+.google-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #1A73E8;
+  background: #E8F0FE;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.google-reviews-modal-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.google-reviews-modal-sub {
+  font-size: 0.78rem;
+  color: #64748B;
+  margin: 2px 0 0 0;
+}
+
+.google-reviews-modal-close {
+  background: #F1F5F9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.google-reviews-modal-close:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+}
+
+.google-reviews-score-banner {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 1.5rem 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.google-score-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.google-score-number {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1;
+}
+
+.google-score-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.google-stars-display {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.google-total-reviews {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #64748B;
+}
+
+.google-maps-ext-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  background: #FFFFFF;
+  border: 1.5px solid #0284C7;
+  color: #0284C7;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.google-maps-ext-btn:hover {
+  background: #EFF6FF;
+  color: #0369A1;
+}
+
+.google-reviews-list {
+  padding: 0.75rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.google-review-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: border-color 0.15s ease;
+}
+
+.google-review-card:hover {
+  border-color: #CBD5E1;
+}
+
+.google-review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.google-review-author-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.google-review-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+.google-review-author-name {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.google-review-author-branch {
+  font-size: 0.72rem;
+  color: #64748B;
+  margin: 0;
+}
+
+.google-review-meta {
+  text-align: right;
+}
+
+.google-review-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.google-review-date {
+  font-size: 0.7rem;
+  color: #94A3B8;
+  margin-top: 2px;
+}
+
+.google-review-comment {
+  font-size: 0.82rem;
+  color: #334155;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+.google-review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  color: #94A3B8;
+  border-top: 1px solid #F8FAFC;
+  padding-top: 6px;
+}
+
+.google-review-helpful {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #64748B;
+  font-weight: 600;
+}
+
