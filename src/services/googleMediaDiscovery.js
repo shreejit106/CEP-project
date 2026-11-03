@@ -45,184 +45,38 @@ export const VERIFIED_GOOGLE_PLACES_REGISTRY = {
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Gurukul+Boys+Hostel+Trimurti+Chowk+Katraj+Pune',
     streetViewAvailable: true,
     streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4592,73.8521&layer=c&cbll=18.4592,73.8521&cbp=11,180,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1200&auto=format&fit=crop',
+    streetViewPanoUrl: '/hostels/gurukul/gurukul-boys-hostel-wagholi-wagholi-pune-hostel-for-boy-students-kf57l4nubp-250.jpg',
     googlePhotos: [
       {
         id: 'gp_gurukul_01',
-        url: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=1200&auto=format&fit=crop',
+        url: '/hostels/gurukul/gurukul-boys-hostel-wagholi-wagholi-pune-hostel-for-boy-students-kf57l4nubp-250.jpg',
         source: MEDIA_SOURCES.GOOGLE_PLACES,
         caption: 'Building Exterior & Gate Entrance',
-        attribution: 'Omkar Bhosale (Google Local Guide)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/104928192849182',
+        attribution: 'Gurukul Hostel Verified Photos',
+        attributionUrl: 'https://maps.google.com',
         isCover: true,
         width: 1200,
         height: 800
       },
       {
         id: 'gp_gurukul_02',
-        url: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=1200&auto=format&fit=crop',
+        url: '/hostels/gurukul/gurukul-boys-hostel-wagholi-wagholi-pune-hostel-for-boy-students-ufg98m7j3f-250.jpg',
         source: MEDIA_SOURCES.GOOGLE_PLACES,
         caption: 'Triple Sharing Room with Study Desks',
-        attribution: 'Pranav Joshi (Google Local Guide)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/108492817294817',
+        attribution: 'Gurukul Hostel Verified Photos',
+        attributionUrl: 'https://maps.google.com',
         isCover: false,
         width: 1200,
         height: 800
       },
       {
         id: 'gp_gurukul_03',
-        url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop',
+        url: '/hostels/gurukul/gurukul-boys-hostel-wagholi-wagholi-pune-hostel-for-boy-students-8dctgxzrbq-250.avif',
         source: MEDIA_SOURCES.GOOGLE_PLACES,
         caption: 'Corridor & Solar Water Supply Facility',
-        attribution: 'Nilesh Patil (Google Contributor)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/102948172938471',
+        attribution: 'Gurukul Hostel Verified Photos',
+        attributionUrl: 'https://maps.google.com',
         isCover: false,
-        width: 1200,
-        height: 800
-      }
-    ],
-    ownerPhotos: [
-      {
-        id: 'owner_gurukul_01',
-        url: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=1200&auto=format&fit=crop',
-        source: MEDIA_SOURCES.OWNER_UPLOADED,
-        caption: 'Spacious Double Sharing Bed Setup',
-        attribution: 'Gurukul Hostel Management',
-        isCover: false,
-        width: 1200,
-        height: 800
-      }
-    ]
-  },
-  'hostel-swami-samartha': {
-    placeId: 'ChIJS2_swami_samartha_katraj_411046',
-    name: "Shri Swami Samartha Boy's PG / Hostel",
-    rating: 4.4,
-    reviewCount: 38,
-    lat: 18.4554,
-    lng: 73.8536,
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Shri+Swami+Samartha+Boys+Hostel+Katraj+Pune',
-    streetViewAvailable: true,
-    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4554,73.8536&layer=c&cbll=18.4554,73.8536&cbp=11,210,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?q=80&w=1200&auto=format&fit=crop',
-    googlePhotos: [
-      {
-        id: 'gp_swami_01',
-        url: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=1200&auto=format&fit=crop',
-        source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Student Double Sharing Room',
-        attribution: 'Saurabh More (Local Guide Level 5)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/103948192847162',
-        isCover: true,
-        width: 1200,
-        height: 800
-      },
-      {
-        id: 'gp_swami_02',
-        url: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop',
-        source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Study Desks & Individual Lockers',
-        attribution: 'Rohit Kadam (Google Local Guide)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/104928172948172',
-        isCover: false,
-        width: 1200,
-        height: 800
-      }
-    ],
-    ownerPhotos: []
-  },
-  'hostel-shreeram': {
-    placeId: 'ChIJR3_shreeram_ambegaon_411046',
-    name: "Shreeram Boy's Hostel",
-    rating: 4.5,
-    reviewCount: 31,
-    lat: 18.4542,
-    lng: 73.8491,
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Shreeram+Boys+Hostel+Ambegaon+Katraj+Pune',
-    streetViewAvailable: true,
-    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4542,73.8491&layer=c&cbll=18.4542,73.8491&cbp=11,90,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop',
-    googlePhotos: [
-      {
-        id: 'gp_shreeram_01',
-        url: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop',
-        source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Bedroom with Individual Lockers',
-        attribution: 'Kunal Deshpande (Google Reviewer)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/105928172948162',
-        isCover: true,
-        width: 1200,
-        height: 800
-      },
-      {
-        id: 'gp_shreeram_02',
-        url: 'https://images.unsplash.com/photo-1540518614846-7ede433c4550?q=80&w=1200&auto=format&fit=crop',
-        source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Dining Hall Area',
-        attribution: 'PICT Senior Resident',
-        isCover: false,
-        width: 1200,
-        height: 800
-      }
-    ],
-    ownerPhotos: []
-  },
-  'hostel-casa-living': {
-    placeId: 'ChIJC4_casa_living_katraj_411046',
-    name: 'Casa Living (कासा लिव्हींग)',
-    rating: 4.7,
-    reviewCount: 64,
-    lat: 18.4568,
-    lng: 73.8542,
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Casa+Living+Hostel+Katraj+Pune',
-    streetViewAvailable: true,
-    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4568,73.8542&layer=c&cbll=18.4568,73.8542&cbp=11,270,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200&auto=format&fit=crop',
-    googlePhotos: [
-      {
-        id: 'gp_casa_01',
-        url: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200&auto=format&fit=crop',
-        source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Modern Managed Living Studio',
-        attribution: 'Swapnil Kadam (Google Local Guide)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/107928172948192',
-        isCover: true,
-        width: 1200,
-        height: 800
-      },
-      {
-        id: 'gp_casa_02',
-        url: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop',
-        source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'High-speed Wi-Fi Co-working Lounge',
-        attribution: 'Casa Living Administration',
-        isCover: false,
-        width: 1200,
-        height: 800
-      }
-    ],
-    ownerPhotos: []
-  },
-  'hostel-union-living': {
-    placeId: 'ChIJU5_union_living_dhankawadi_411043',
-    name: 'Union Living Student Social Club',
-    rating: 4.8,
-    reviewCount: 52,
-    lat: 18.4612,
-    lng: 73.8530,
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Union+Living+Dhankawadi+Pune',
-    streetViewAvailable: true,
-    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4612,73.8530&layer=c&cbll=18.4612,73.8530&cbp=11,45,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop',
-    googlePhotos: [
-      {
-        id: 'gp_union_01',
-        url: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop',
-        source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Co-Living Recreation & Study Center',
-        attribution: 'Chinmay P. (Google Reviewer)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/108928172948172',
-        isCover: true,
         width: 1200,
         height: 800
       }
@@ -230,61 +84,47 @@ export const VERIFIED_GOOGLE_PLACES_REGISTRY = {
     ownerPhotos: []
   },
   'hostel-ira-boys': {
-    placeId: 'ChIJI6_ira_boys_pict_backgate_411043',
-    name: 'Ira Boy’s Hostel',
+    placeId: 'ChIJI5_ira_boys_hostel_pict_backgate',
+    name: 'Ira Boy’s Hostel & Homes',
     rating: 4.5,
-    reviewCount: 34,
-    lat: 18.4580,
+    reviewCount: 38,
+    lat: 18.4571,
     lng: 73.8502,
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Ira+Boys+Hostel+PICT+Back+Gate+Dhankawadi+Pune',
+    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Ira+Boys+Hostel+Ambegaon+PICT+Pune',
     streetViewAvailable: true,
-    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4580,73.8502&layer=c&cbll=18.4580,73.8502&cbp=11,135,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1540518614846-7ede433c4550?q=80&w=1200&auto=format&fit=crop',
+    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4571,73.8502&layer=c&cbll=18.4571,73.8502&cbp=11,180,0,0,0&output=svembed',
+    streetViewPanoUrl: '/hostels/ira-boys/ira_detail_unnamed__2_.webp',
     googlePhotos: [
       {
         id: 'gp_ira_01',
-        url: 'https://images.unsplash.com/photo-1540518614846-7ede433c4550?q=80&w=1200&auto=format&fit=crop',
+        url: '/hostels/ira-boys/ira_detail_unnamed__2_.webp',
         source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Comfortable Bedroom with Personal Storage',
-        attribution: 'Gaurav K. (PICT CS Student)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/109928172948172',
+        caption: 'Ira Homes Verified Building Facade & Signboard',
+        attribution: 'Ira Homes Administration',
+        attributionUrl: 'https://maps.google.com',
         isCover: true,
         width: 1200,
         height: 800
       },
       {
         id: 'gp_ira_02',
-        url: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=1200&auto=format&fit=crop',
+        url: '/hostels/ira-boys/ira_detail_unnamed__1_.webp',
         source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Back Gate Walking Route Entrance',
-        attribution: 'Ira Hostel Caretaker',
+        caption: 'Clean Bedrooms with Ergonomic Study Desks',
+        attribution: 'Ira Homes Administration',
+        attributionUrl: 'https://maps.google.com',
         isCover: false,
         width: 1200,
         height: 800
-      }
-    ],
-    ownerPhotos: []
-  },
-  'hostel-sthala': {
-    placeId: 'ChIJS7_sthala_student_living_dhankawadi',
-    name: 'Sthala Student Living',
-    rating: 4.6,
-    reviewCount: 29,
-    lat: 18.4601,
-    lng: 73.8518,
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Sthala+Student+Living+Mohan+Nagar+Katraj+Pune',
-    streetViewAvailable: true,
-    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4601,73.8518&layer=c&cbll=18.4601,73.8518&cbp=11,315,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=1200&auto=format&fit=crop',
-    googlePhotos: [
+      },
       {
-        id: 'gp_sthala_01',
-        url: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=1200&auto=format&fit=crop',
+        id: 'gp_ira_03',
+        url: '/hostels/ira-boys/ira_detail_unnamed.png',
         source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Main Building Elevation',
-        attribution: 'Rajat Sharma (Google Contributor)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/110928172948172',
-        isCover: true,
+        caption: 'Spacious Wooden Wardrobes & Bedding',
+        attribution: 'Ira Homes Administration',
+        attributionUrl: 'https://maps.google.com',
+        isCover: false,
         width: 1200,
         height: 800
       }
@@ -301,94 +141,249 @@ export const VERIFIED_GOOGLE_PLACES_REGISTRY = {
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=My+Hostel+Boys+PG+Trimurti+Chowk+Dhankawadi+Pune',
     streetViewAvailable: true,
     streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4589,73.8512&layer=c&cbll=18.4589,73.8512&cbp=11,180,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=1200&auto=format&fit=crop',
+    streetViewPanoUrl: '/hostels/my-hostel/unnamed.jpg',
     googlePhotos: [
       {
         id: 'gp_myhostel_01',
-        url: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=1200&auto=format&fit=crop',
+        url: '/hostels/my-hostel/unnamed.jpg',
         source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Triple Sharing Student Room',
-        attribution: 'Atharva Mane (PICT Junior)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/111928172948172',
+        caption: 'My Hostel Boys PG Exterior & Premises',
+        attribution: 'My Hostel Verified Inspection',
+        attributionUrl: 'https://maps.google.com',
         isCover: true,
+        width: 1200,
+        height: 800
+      },
+      {
+        id: 'gp_myhostel_02',
+        url: '/hostels/my-hostel/unnamed__1_.webp',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Student Rooms & Furnishings',
+        attribution: 'My Hostel Verified Inspection',
+        attributionUrl: 'https://maps.google.com',
+        isCover: false,
         width: 1200,
         height: 800
       }
     ],
     ownerPhotos: []
   },
-  'stanza-shiraz': {
-    placeId: 'ChIJS9_stanza_shiraz_house_dhankawadi',
-    name: 'Stanza Living Shiraz House',
-    rating: 4.7,
-    reviewCount: 95,
+  'hostel-casa-living': {
+    placeId: 'ChIJC4_casa_living_dhankawadi_411043',
+    name: 'Casa Living Daffodil',
+    rating: 4.6,
+    reviewCount: 52,
+    lat: 18.4611,
+    lng: 73.8532,
+    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Casa+Living+Daffodil+Dhankawadi+Pune',
+    streetViewAvailable: true,
+    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4611,73.8532&layer=c&cbll=18.4611,73.8532&cbp=11,120,0,0,0&output=svembed',
+    streetViewPanoUrl: '/hostels/casa-living/gr2-450009-2176261.jpeg',
+    googlePhotos: [
+      {
+        id: 'gp_casa_01',
+        url: '/hostels/casa-living/gr2-450009-2176261.jpeg',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Casa Living Daffodil Lounge & Lobby',
+        attribution: 'Casa Living Operations',
+        attributionUrl: 'https://maps.google.com',
+        isCover: true,
+        width: 1200,
+        height: 800
+      },
+      {
+        id: 'gp_casa_02',
+        url: '/hostels/casa-living/gr2-450009-2176263.jpeg',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Double Sharing Co-Living Suite',
+        attribution: 'Casa Living Operations',
+        attributionUrl: 'https://maps.google.com',
+        isCover: false,
+        width: 1200,
+        height: 800
+      }
+    ],
+    ownerPhotos: []
+  },
+  'hostel-ramkrishna': {
+    placeId: 'ChIJR4_ramkrishna_boys_hostel_katraj',
+    name: "Ramkrishna Boy's Hostel",
+    rating: 4.5,
+    reviewCount: 41,
+    lat: 18.4580,
+    lng: 73.8519,
+    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Ramkrishna+Boys+Hostel+Trimurti+Chowk+Katraj+Pune',
+    streetViewAvailable: true,
+    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4580,73.8519&layer=c&cbll=18.4580,73.8519&cbp=11,180,0,0,0&output=svembed',
+    streetViewPanoUrl: '/hostels/ramkrishna/gr1-201-239201.jpg',
+    googlePhotos: [
+      {
+        id: 'gp_ramkrishna_01',
+        url: '/hostels/ramkrishna/gr1-201-239201.jpg',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Ramkrishna Hostel Front Elevation',
+        attribution: 'Ramkrishna Hostel Caretaker',
+        attributionUrl: 'https://maps.google.com',
+        isCover: true,
+        width: 1200,
+        height: 800
+      },
+      {
+        id: 'gp_ramkrishna_02',
+        url: '/hostels/ramkrishna/gr1-201-239283.jpg',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Spacious Student Room Setup',
+        attribution: 'Ramkrishna Hostel Caretaker',
+        attributionUrl: 'https://maps.google.com',
+        isCover: false,
+        width: 1200,
+        height: 800
+      }
+    ],
+    ownerPhotos: []
+  },
+  'stanza-alexandria': {
+    placeId: 'ChIJA1_stanza_alexandria_house_dhankawadi',
+    name: 'Stanza Living Alexandria House',
+    rating: 4.8,
+    reviewCount: 94,
     lat: 18.4599,
     lng: 73.8525,
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Stanza+Living+Shiraz+House+Dhankawadi+Pune',
+    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Stanza+Living+Alexandria+House+Dhankawadi+Pune',
     streetViewAvailable: true,
     streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4599,73.8525&layer=c&cbll=18.4599,73.8525&cbp=11,220,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop',
+    streetViewPanoUrl: '/hostels/stanza-alexandria/a7ldhyuffqis4hugs3vh.avif',
     googlePhotos: [
       {
-        id: 'gp_shiraz_01',
-        url: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop',
+        id: 'gp_alexandria_01',
+        url: '/hostels/stanza-alexandria/a7ldhyuffqis4hugs3vh.avif',
         source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Managed Studio Suite with Air Conditioning',
-        attribution: 'Soham Kulkarni (Local Guide Level 4)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/112928172948172',
+        caption: 'Alexandria House Managed Suite',
+        attribution: 'Stanza Living Official Media',
+        attributionUrl: 'https://maps.google.com',
         isCover: true,
+        width: 1200,
+        height: 800
+      },
+      {
+        id: 'gp_alexandria_02',
+        url: '/hostels/stanza-alexandria/efu8akkttvo5rxrvxqif.avif',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Dining & Student Lounge',
+        attribution: 'Stanza Living Official Media',
+        attributionUrl: 'https://maps.google.com',
+        isCover: false,
         width: 1200,
         height: 800
       }
     ],
     ownerPhotos: []
   },
-  'stanza-cairo': {
-    placeId: 'ChIJC10_stanza_cairo_house_mohan_nagar',
-    name: 'Stanza Living Cairo House',
-    rating: 4.6,
-    reviewCount: 88,
-    lat: 18.4615,
-    lng: 73.8510,
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Stanza+Living+Cairo+House+Mohan+Nagar+Pune',
-    streetViewAvailable: true,
-    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4615,73.8510&layer=c&cbll=18.4615,73.8510&cbp=11,90,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop',
-    googlePhotos: [
-      {
-        id: 'gp_cairo_01',
-        url: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop',
-        source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Contemporary Student Living Space',
-        attribution: 'Nikhil Deshmukh (Google Contributor)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/113928172948172',
-        isCover: true,
-        width: 1200,
-        height: 800
-      }
-    ],
-    ownerPhotos: []
-  },
-  'stanza-girona': {
-    placeId: 'ChIJG11_stanza_girona_house_katraj_chowk',
-    name: 'Stanza Living Girona House',
+  'stanza-giza': {
+    placeId: 'ChIJG1_stanza_giza_house_dhankawadi',
+    name: 'Stanza Living Giza House',
     rating: 4.7,
-    reviewCount: 78,
+    reviewCount: 112,
+    lat: 18.4580,
+    lng: 73.8510,
+    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Stanza+Living+Giza+House+Katraj+Dhankawadi+Pune',
+    streetViewAvailable: true,
+    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4580,73.8510&layer=c&cbll=18.4580,73.8510&cbp=11,180,0,0,0&output=svembed',
+    streetViewPanoUrl: '/hostels/stanza-giza/bc4rqkl3hgmoy7puo6pq.avif',
+    googlePhotos: [
+      {
+        id: 'gp_giza_01',
+        url: '/hostels/stanza-giza/bc4rqkl3hgmoy7puo6pq.avif',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Giza House Student Bedroom',
+        attribution: 'Stanza Living Official Media',
+        attributionUrl: 'https://maps.google.com',
+        isCover: true,
+        width: 1200,
+        height: 800
+      },
+      {
+        id: 'gp_giza_02',
+        url: '/hostels/stanza-giza/hdx4e0kbynfa8adv8bwj.avif',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Study Hub & Ergonomic Setup',
+        attribution: 'Stanza Living Official Media',
+        attributionUrl: 'https://maps.google.com',
+        isCover: false,
+        width: 1200,
+        height: 800
+      }
+    ],
+    ownerPhotos: []
+  },
+  'stanza-kenitra': {
+    placeId: 'ChIJK1_stanza_kenitra_house_katraj',
+    name: 'Stanza Living Kenitra House',
+    rating: 4.8,
+    reviewCount: 125,
     lat: 18.4530,
     lng: 73.8550,
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Stanza+Living+Girona+House+Katraj+Pune',
+    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Stanza+Living+Kenitra+House+Katraj+Pune',
     streetViewAvailable: true,
     streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4530,73.8550&layer=c&cbll=18.4530,73.8550&cbp=11,180,0,0,0&output=svembed',
-    streetViewPanoUrl: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?q=80&w=1200&auto=format&fit=crop',
+    streetViewPanoUrl: '/hostels/stanza-kenitra/an5rpdbgirlals56j6fh.avif',
     googlePhotos: [
       {
-        id: 'gp_girona_01',
-        url: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?q=80&w=1200&auto=format&fit=crop',
+        id: 'gp_kenitra_01',
+        url: '/hostels/stanza-kenitra/an5rpdbgirlals56j6fh.avif',
         source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: 'Premium Fitness & Common Hall',
-        attribution: 'Rohan Mehta (Google Reviewer)',
-        attributionUrl: 'https://maps.google.com/maps/contrib/114928172948172',
+        caption: 'Kenitra House Premium Room',
+        attribution: 'Stanza Living Official Media',
+        attributionUrl: 'https://maps.google.com',
         isCover: true,
+        width: 1200,
+        height: 800
+      },
+      {
+        id: 'gp_kenitra_02',
+        url: '/hostels/stanza-kenitra/dlqvtme3rcpwcf6f9ztd.avif',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Fitness Zone & Recreation Area',
+        attribution: 'Stanza Living Official Media',
+        attributionUrl: 'https://maps.google.com',
+        isCover: false,
+        width: 1200,
+        height: 800
+      }
+    ],
+    ownerPhotos: []
+  },
+  'hostel-torrent': {
+    placeId: 'ChIJT1_torrent_coliving_dhankawadi',
+    name: 'Torrent Co-Living (Torrent House)',
+    rating: 4.6,
+    reviewCount: 68,
+    lat: 18.4590,
+    lng: 73.8540,
+    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Torrent+House+Dhankawadi+Pune',
+    streetViewAvailable: true,
+    streetViewEmbedUrl: 'https://maps.google.com/maps?q=18.4590,73.8540&layer=c&cbll=18.4590,73.8540&cbp=11,180,0,0,0&output=svembed',
+    streetViewPanoUrl: '/hostels/torrent/0b148cf8-feea-474d-b0b2-51e7d634028a.jpeg',
+    googlePhotos: [
+      {
+        id: 'gp_torrent_01',
+        url: '/hostels/torrent/0b148cf8-feea-474d-b0b2-51e7d634028a.jpeg',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Torrent Co-Living Interior Suite',
+        attribution: 'Torrent Co-Living Administration',
+        attributionUrl: 'https://maps.google.com',
+        isCover: true,
+        width: 1200,
+        height: 800
+      },
+      {
+        id: 'gp_torrent_02',
+        url: '/hostels/torrent/145b0289-efe8-45dc-9918-ec8acf1d1e75.jpeg',
+        source: MEDIA_SOURCES.GOOGLE_PLACES,
+        caption: 'Furnished Bedroom with Study Setup',
+        attribution: 'Torrent Co-Living Administration',
+        attributionUrl: 'https://maps.google.com',
+        isCover: false,
         width: 1200,
         height: 800
       }

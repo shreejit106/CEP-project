@@ -1,5 +1,4 @@
 import { pictHostels } from './pictHostelsData';
-import { generatedPgs } from './generatedPgs';
 import { aggregateAspectScores } from '../services/reviewIntelligence';
 import { structureFacilityData } from '../services/facilityIntelligence';
 import { calculateBayesianRating, calculateConfidenceScore } from '../services/recommendationEngine';
@@ -40,38 +39,35 @@ function enrichProperty(property, index) {
     complianceNotice: 'Ratings and place metadata queried via Google Places API terms. Reviews and aspect analysis provided independently by PG Scout verified students.'
   };
 
-  // Build Media Gallery with Source Prioritization
+  // Build Media Gallery using Real Verified Photographs from PICS Database
   const mediaGallery = [];
 
-  // 1. Owner uploaded photographs
-  if (regEntry?.ownerPhotos && regEntry.ownerPhotos.length > 0) {
-    mediaGallery.push(...regEntry.ownerPhotos);
-  }
-
-  // 2. Google Places property photographs
-  if (regEntry?.googlePhotos && regEntry.googlePhotos.length > 0) {
-    mediaGallery.push(...regEntry.googlePhotos);
-  } else if (property.images && property.images.length > 0) {
+  // 1. Property real local images from PICS take top priority
+  if (property.images && property.images.length > 0) {
     property.images.forEach((imgUrl, imgIdx) => {
       mediaGallery.push({
-        id: `gp_${property.id}_${imgIdx}`,
+        id: `local_${property.id}_${imgIdx}`,
         url: imgUrl,
-        source: MEDIA_SOURCES.GOOGLE_PLACES,
-        caption: imgIdx === 0 ? 'Building Elevation' : `Interior Property Photo ${imgIdx + 1}`,
-        attribution: 'Google Maps Place Discovery',
+        source: MEDIA_SOURCES.OWNER_UPLOADED,
+        caption: imgIdx === 0 ? `${property.name} - Verified Property View` : `${property.name} - Room & Facility View ${imgIdx + 1}`,
+        attribution: 'PGScout Verified Property Physical Gallery',
         attributionUrl: externalPlace.mapsUrl,
         isCover: imgIdx === 0,
         width: 1200,
         height: 800
       });
     });
+  } else if (regEntry?.ownerPhotos && regEntry.ownerPhotos.length > 0) {
+    mediaGallery.push(...regEntry.ownerPhotos);
+  } else if (regEntry?.googlePhotos && regEntry.googlePhotos.length > 0) {
+    mediaGallery.push(...regEntry.googlePhotos);
   }
 
-  // 3. Fallback if empty
+  // Fallback if empty
   if (mediaGallery.length === 0) {
     mediaGallery.push({
       id: `fallback_${property.id}`,
-      url: property.image || 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=1200&auto=format&fit=crop',
+      url: property.image || '/hostels/gurukul/gurukul-boys-hostel-wagholi-wagholi-pune-hostel-for-boy-students-kf57l4nubp-250.jpg',
       source: MEDIA_SOURCES.BRANDED_FALLBACK,
       caption: 'PG Scout Verified Campus Stay',
       attribution: 'PG Scout Inspection Archive',
@@ -131,15 +127,11 @@ function enrichProperty(property, index) {
   };
 }
 
-// Enriched verified PICT residences
+// Enriched verified PICT residences (ONLY properties backed by real photographs in PICS database)
 export const enrichedPictHostels = pictHostels.map((h, i) => enrichProperty(h, i));
 
-// Enriched other Pune college PGs
-export const enrichedOtherPgs = generatedPgs.filter(pg => pg.collegeId !== 'c2').slice(0, 15).map((p, i) => enrichProperty(p, i + 100));
-
-// Unified Master Enriched Catalog
+// Unified Master Enriched Catalog — strictly verified hostels with real property photographs
 export const enrichedAllPgs = [
-  ...enrichedPictHostels,
-  ...enrichedOtherPgs
+  ...enrichedPictHostels
 ];
 

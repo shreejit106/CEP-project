@@ -32,7 +32,7 @@ export function UserProvider({ children }) {
     // Pre-seed with verified hostels so the user immediately sees data in the profile
     return [
       pictHostels[0], // Gurukul Boy's Hostel
-      pictHostels[1], // Shri Swami Samartha
+      pictHostels[1], // Ira Boy's Hostel
     ];
   });
 
@@ -49,7 +49,7 @@ export function UserProvider({ children }) {
         propertyId: pictHostels[0].id,
         propertyName: pictHostels[0].name,
         address: pictHostels[0].landmark || pictHostels[0].address,
-        image: pictHostels[0].images?.[0] || 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=600&auto=format&fit=crop',
+        image: pictHostels[0].images?.[0] || '/hostels/gurukul/gurukul-boys-hostel-wagholi-wagholi-pune-hostel-for-boy-students-kf57l4nubp-250.jpg',
         contactNumber: pictHostels[0].contactNumber,
         studentName: 'Pratham Shinde',
         studentPhone: '+91 98231 45678',
